@@ -38,7 +38,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Fitness Tracker API!');
+  res.send('Welcome to the Davyvote API!');
 });
 
 import usersRouter from './routes/users.js';  

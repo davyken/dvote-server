@@ -43,11 +43,9 @@ app.get('/', (req, res) => {
 
 import usersRouter from './routes/users.js';  
 import contestRouter from './routes/contests.js';
-// import voteRoute from './routes/vote.js'
 
 app.use('/users', usersRouter); 
 app.use('/contests', contestRouter);
-// app.use('./vote',  voteRoute)
 
 connectDB();
 

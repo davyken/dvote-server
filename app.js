@@ -64,6 +64,6 @@ app.use((err, req, res, next) => {
   });  
 });
 
-app.listen(port, () => console.log(`Server Running on port ${port}`));  
+app.listen(port, () => console.log(`Server started on port ${port}`));  
 
 export default app;

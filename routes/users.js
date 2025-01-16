@@ -146,10 +146,10 @@ router.post("/login", loginValidator, async (req, res, next) => {
 
     const payload = { user: { id: user.id } };
     const accessToken = jwt.sign(payload, process.env.JWT_SECRET, {
-      expiresIn: "7d",
+      expiresIn: "24d",
     });
     const refreshToken = jwt.sign(payload, process.env.JWT_SECRET, {
-      expiresIn: "7d",
+      expiresIn: "24d",
     });
 
     user.refreshToken = refreshToken;
@@ -180,7 +180,7 @@ router.post("/refresh-token", async (req, res) => {
 
       const payload = { user: { id: decoded.user.id } };
       const newAccessToken = jwt.sign(payload, process.env.JWT_SECRET, {
-        expiresIn: "7h",
+        expiresIn: "24h",
       });
 
       res.json({ accessToken: newAccessToken });
